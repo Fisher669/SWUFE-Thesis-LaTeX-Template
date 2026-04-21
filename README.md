@@ -1,6 +1,6 @@
 # SWUFE Thesis LaTeX Template
 
-A professional LaTeX template for bachelor, master, and doctoral theses at Southwestern University of Finance and Economics (SWUFE). This template is based on the original SWUFE thesis template with improvements for English writing and modern LaTeX practices.
+A professional LaTeX template for bachelor, master, and doctoral theses at Southwestern University of Finance and Economics (SWUFE). This template is based on the original SWUFE thesis template with improvements for English writing and modern LaTeX practices. Revised from https://github.com/sierxue/ThesisSWUFE, also The original GitHub address of Wangwen's UESTC (University of Electronic Science and Technology of China) thesis template is: https://github.com/bdebye/thesisuestc. Thanks to them, and welcome to contribute.
 
 ## Features
 
