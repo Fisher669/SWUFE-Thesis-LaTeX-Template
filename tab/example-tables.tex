@@ -1,0 +1,205 @@
+% ============================================
+% EXAMPLE TABLES FOR THESIS
+% ============================================
+% This file demonstrates professional table formatting
+% using the booktabs package
+% FOLLOWING contains AI generating content just for showing.
+
+% ========== TABLE 1: DESCRIPTIVE STATISTICS ==========
+
+\begin{table}[ht]
+\centering
+\caption{Descriptive Statistics of Key Variables}
+\label{tab:descriptive}
+\begin{tabular}{lcccc}
+\toprule
+Variable & Mean & SD & Min & Max \\
+\midrule
+\multicolumn{5}{l}{\textbf{Land Use Variables}} \\
+Land Conversion Rate (\%) & <num> & <num> & <num> & <num> \\
+Industrial Land Share (\%) & <num> & <num> & <num> & <num> \\
+Commercial Land Share (\%) & <num> & <num> & <num> & <num> \\
+Residential Land Share (\%) & <num> & <num> & <num> & <num> \\
+\midrule
+\multicolumn{5}{l}{\textbf{Economic Variables}} \\
+GDP Growth Rate (\%) & <num> & <num> & -<num> & <num> \\
+Employment Growth (\%) & <num> & <num> & -<num> & <num> \\
+Property Price Index & <num> & <num> & <num> & <num> \\
+Fiscal Revenue (billion) & <num> & <num> & <num> & <num> \\
+\midrule
+\multicolumn{5}{l}{\textbf{Institutional Variables}} \\
+Zoning Flexibility Index & <num> & <num> & <num> & <num> \\
+Property Rights Security & <num> & <num> & <num> & <num> \\
+Governance Quality & <num> & <num> & <num> & <num> \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: This table presents descriptive statistics for the main variables used in the analysis. SD stands for standard deviation. The sample includes 250 cities over the period 2010-2022.
+\end{tablenotes}
+\end{table}
+
+% ========== TABLE 2: CORRELATION MATRIX ==========
+
+\begin{table}[ht]
+\centering
+\caption{Correlation Matrix of Key Variables}
+\label{tab:correlation}
+\begin{tabular}{lcccccc}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+(1) Land Conversion Rate & <num> & & & & & \\
+(2) GDP Growth & <num>*** & <num> & & & & \\
+(3) Employment Growth & <num>*** & <num>*** & <num> & & & \\
+(4) Property Prices & <num>*** & <num>*** & <num>*** & <num> & & \\
+(5) Zoning Flexibility & <num>** & <num>** & <num>* & <num>*** & <num> & \\
+(6) Governance Quality & <num>*** & <num>*** & <num>** & <num>*** & <num>*** & <num> \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: This table shows Pearson correlation coefficients between key variables. ***, **, and * denote significance at the 1\%, 5\%, and 10\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+% ========== TABLE 3: REGRESSION RESULTS ==========
+
+\begin{table}[ht]
+\centering
+\caption{Regression Results}
+\label{tab:regression}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{4}{c}{Dependent Variable: GDP Growth Rate} \\
+\cmidrule(lr){2-5}
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Land Conversion Rate & <num>*** & <num>*** & <num>*** & <num>** \\
+ & (<num>) & (<num>) & (<num>) & (<num>) \\
+Industrial Land Share & & -<num>** & -<num>** & -<num>** \\
+ & & (<num>) & (<num>) & (<num>) \\
+Commercial Land Share & & <num>*** & <num>*** & <num>*** \\
+ & & (<num>) & (<num>) & (<num>) \\
+Zoning Flexibility & & & <num>** & <num>** \\
+ & & & (<num>) & (<num>) \\
+Governance Quality & & & & <num>* \\
+ & & & & (<num>) \\
+\midrule
+City Fixed Effects & Yes & Yes & Yes & Yes \\
+Year Fixed Effects & Yes & Yes & Yes & Yes \\
+Observations & 3,000 & 3,000 & 3,000 & 3,000 \\
+R-squared & <num> & <num> & <num> & <num> \\
+Adjusted R-squared & <num> & <num> & <num> & <num> \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: This table presents regression results examining the relationship between land conversion and economic outcomes. Standard errors are clustered at the city level and shown in parentheses. ***, **, and * denote significance at the 1\%, 5\%, and 10\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+% ========== TABLE 4: ROBUSTNESS CHECKS ==========
+
+\begin{table}[ht]
+\centering
+\caption{Robustness Checks: Alternative Specifications}
+\label{tab:robustness}
+\begin{tabular}{lccccc}
+\toprule
+ & \multicolumn{5}{c}{Dependent Variable: GDP Growth Rate} \\
+\cmidrule(lr){2-6}
+ & Baseline & IV & GMM & Spatial & Dynamic \\
+\midrule
+Land Conversion Rate & <num>** & <num>*** & <num>*** & <num>** & <num>*** \\
+ & (<num>) & (<num>) & (<num>) & (<num>) & (<num>) \\
+\midrule
+Estimation Method & OLS & 2SLS & System GMM & SAR & Dynamic Panel \\
+Instruments & & Yes & Yes & & Yes \\
+Spatial Effects & & & & Yes & \\
+Lagged Dependent & & & & & Yes \\
+Observations & 3,000 & 2,800 & 2,800 & 3,000 & 2,800 \\
+R-squared & <num> & <num> & & <num> & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: This table presents robustness checks using alternative estimation methods. IV: instrumental variables; GMM: generalized method of moments; SAR: spatial autoregressive model. Standard errors in parentheses. ***, **, and * denote significance at the 1\%, 5\%, and 10\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+% ========== TABLE 5: HETEROGENEITY ANALYSIS ==========
+
+\begin{table}[ht]
+\centering
+\caption{Heterogeneity Analysis: By Region and City Size}
+\label{tab:heterogeneity}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{4}{c}{Dependent Variable: GDP Growth Rate} \\
+\cmidrule(lr){2-5}
+ & Coastal & Inland & Large Cities & Small Cities \\
+\midrule
+Land Conversion Rate & <num>*** & <num>* & <num>*** & <num>* \\
+ & (<num>) & (<num>) & (<num>) & (<num>) \\
+Interaction: Conversion × Flexibility & <num>** & <num> & <num>*** & <num> \\
+ & (<num>) & (<num>) & (<num>) & (<num>) \\
+\midrule
+Controls & Yes & Yes & Yes & Yes \\
+Fixed Effects & Yes & Yes & Yes & Yes \\
+Observations & 1,500 & 1,500 & 1,200 & 1,800 \\
+R-squared & <num> & <num> & <num> & <num> \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: This table examines heterogeneity in the effects of land conversion across different regions and city sizes. Large cities are defined as those with population over 1 million. Standard errors in parentheses. ***, **, and * denote significance at the 1\%, 5\%, and 10\% levels, respectively.
+\end{tablenotes}
+\end{table}
+
+% ========== TABLE 6: POLICY SIMULATION ==========
+
+\begin{table}[ht]
+\centering
+\caption{Policy Simulation: Effects of Land Use Reforms}
+\label{tab:policy}
+\begin{tabular}{lccc}
+\toprule
+Policy Scenario & GDP Growth & Employment & Property Prices \\
+ & (\% change) & (\% change) & (\% change) \\
+\midrule
+\textbf{Baseline (Current Policy)} & <num>\% & <num>\% & <num>\% \\
+\midrule
+\textbf{Policy Reforms:} \\
+1. Increase Zoning Flexibility & +<num>\% & +<num>\% & +<num>\% \\
+2. Streamline Approval Process & +<num>\% & +<num>\% & +<num>\% \\
+3. Enhance Property Rights & +<num>\% & +<num>\% & +<num>\% \\
+4. Combined Reforms & +<num>\% & +<num>\% & +<num>\% \\
+\midrule
+\textbf{Cost-Benefit Analysis:} \\
+Implementation Cost (billion) & <num> & <num> & <num> \\
+Expected Benefits (billion) & <num> & <num> & <num> \\
+Benefit-Cost Ratio & <num> & <num> & <num> \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes}: This table presents simulation results for different land use policy reforms. The simulation is based on the estimated coefficients from the regression models and assumes full implementation of each reform over a 5-year period.
+\end{tablenotes}
+\end{table}
+
+% ============================================
+% TABLE FORMATTING GUIDELINES:
+% ============================================
+% 1. Always use booktabs package (toprule, midrule, bottomrule)
+% 2. Use \centering for table alignment
+% 3. Include descriptive captions
+% 4. Use \label{} for cross-referencing
+% 5. Include notes explaining variables, data sources, etc.
+% 6. Use consistent decimal alignment
+% 7. Group related variables with \multicolumn{}
+% 8. Use appropriate significance stars: *** p<<num>, ** p<<num>, * p<<num>
+% 9. Report standard errors in parentheses
+% 10. Include sample size and R-squared values
+% 11. Use \cmidrule for column groupings
+% 12. Consider using tablenotes environment for detailed notes

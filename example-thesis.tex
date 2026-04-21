@@ -1,0 +1,95 @@
+\documentclass[bachelor,english]{thesis-swufe}
+
+\usepackage{float} % H placement for figures
+\usepackage{booktabs} % Professional tables
+\usepackage{natbib}  % For bibliography with AEA or IEEE style
+\setcitestyle{authoryear}  % Author-year citation format
+\usepackage{amsthm}  % Theorem environments
+\usepackage{tabularx} % Flexible tables
+\usepackage{graphicx} % For including graphics
+
+% ============================================
+% THESIS INFORMATION
+% ============================================
+
+% For Bachelor thesis (uncomment and fill)
+\title{Your Thesis Title Here}
+\college{Your College Name}
+\major{Your Major}
+\grade{Your Grade Level}
+\studentnumber{Your Student ID}
+\advisor{Your Advisor's Name}
+\author{Your Name}
+
+% For Master/Doctoral thesis (comment out bachelor section above and uncomment below)
+% \title{Your Thesis Title Here}
+% \author{Your Name}
+% \advisor{Your Advisor's Name}
+% \school{Your School}
+% \major{Your Major}
+% \studentnumber{Your Student ID}
+
+% ============================================
+% DOCUMENT STRUCTURE
+% ============================================
+
+\begin{document}
+
+% Generate cover page
+\makecover
+
+% Academic declaration (PDF version)
+\thesisdeclarationpdf{misc/学术声明.pdf}
+
+% Abstracts
+\input{misc/chinese_abstract}
+\input{misc/english_abstract}
+
+% Table of contents
+\thesistableofcontents
+
+% ============================================
+% THESIS CHAPTERS
+% ============================================
+
+% Introduction
+\input{chapter/1.intro.tex}
+
+% Literature Review
+\input{chapter/2.LR.tex}
+
+% Theoretical Framework
+\input{chapter/3.Theory.tex}
+
+% Results and Analysis
+\input{chapter/4.Result.tex}
+
+% Conclusion
+\input{chapter/5.Conclusion.tex}
+
+% ============================================
+% BACK MATTER
+% ============================================
+
+% Bibliography
+\nocite{*} % Include all references from .bib file
+\bibliographystyle{econ-aea} % AEA style for economics
+% Alternative styles:
+% \bibliographystyle{thesis-swufe} % SWUFE style
+% \bibliographystyle{plainnat} % Plain author-year
+% \bibliographystyle{ieeetr} % IEEE style
+\bibliography{example-refs} % Bibliography database
+
+% Appendix (if needed)
+\input{misc/appendix}
+
+% Publications (if applicable)
+% \thesisloadaccomplish{publications}
+
+% Acknowledgements
+\input{misc/acknowledgement}
+
+% Back cover
+\makebackcover
+
+\end{document}
