@@ -344,8 +344,8 @@
 
 % \addtolength{\cftchapnumwidth}{25pt} 单独注释的
 
-\cftsetindents{section}{21pt}{22pt}
-\cftsetindents{subsection}{44pt}{31pt}
+\cftsetindents{section}{21pt}{22pt}          % ToC section 二级缩进/编号宽度
+\cftsetindents{subsection}{44pt}{38pt}       % [修正] ToC subsection 三级缩进/编号宽度（增大 numwidth，避免 "4.3.1" 挤占标题）
 \cftsetindents{subsubsection}{76pt}{41pt}
 
 \renewcommand{\cfttoctitlefont}{\fontsize{15pt}{15pt}\selectfont\strong}
@@ -803,8 +803,9 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[12bp]
 }
 
 \usepackage{tocloft}
-\renewcommand{\cftchapfont}{\bf\ttfamily}
-\renewcommand{\cftsecfont}{\normalfont\ttfamily}
+\renewcommand{\cftchapfont}{\bf\ttfamily}           % ToC chapter 一级：粗体等宽
+\renewcommand{\cftsecfont}{\normalfont\ttfamily}    % ToC section 二级：正常等宽
+\renewcommand{\cftsubsecfont}{\normalfont\ttfamily} % [修正] ToC subsection 三级：正常等宽（与二级保持一致）
 
 \pretocmd{\tableofcontents}{
   \fancyhf{}
